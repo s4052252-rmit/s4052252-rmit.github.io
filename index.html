@@ -3,65 +3,218 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <title>VIDEO ART - Media Player Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="main.js" defer></script>
-
-    <title>Media Player Baseline</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <!-- this is my page heading -->
+    <!-- Header Section -->
     <header>
-      <h1>My Media Player</h1>
+      <div class="logo">VIDEO ART</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <!-- this is my nav bar -->
-    <nav>
-      <a>Home</a>
-      <a>Media Player</a>
-      <a>About</a>
-      <a>Contact</a>
-    </nav>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Media Player Website -</h1>
+        <div class="subtitle">Video ART</div>
+        <p>
+          The website design and creation have created a media player code based
+          on one of the specified contexts.
+        </p>
+      </div>
+    </section>
 
-    <!-- this is my main -->
-    <main>
-      <!-- this is my media player section -->
-      <section class="mediaPlayerSection">
-        <!-- media player source -->
-        <video id="mediaPlayer" controls autoplay muted="true">
-          <source
-            id="mediaSource"
-            src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
-            type="video/mp4" />
-          This browser doesn't support the video element.
-        </video>
-        <!-- media player controls -->
-        <div class="mediaPlayerControlContainer">
-          <button id="playPauseButton">
-            <img
-              id="playPauseIcon"
-              src="./assets/play-icon.png"
-              alt="play icon" />
-          </button>
-          <progress id="timelineProgress" max="100" value="0"></progress>
-          <!-- adding in a time feedback section : let users know how long the video is and its current time -->
-          <p class="timeContainer">
-            <span id="currentTimeFeedback">0:00</span>
-            /
-            <span id="totalTimeFeedback">4:30</span>
-          </p>
+    <section class="video-section">
+        <div class="media-player" id="mediaPlayer">
+          <div class="video-container">
+                <div class="video-title" id="videoTitle">Video Art 06</div>
+                <video id="custom-video-player">
+                  <source src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            <video id="custom-video-player">
+              <source
+                src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
+                type="video/mp4" />
+              Your browser does not support the video tag.
+                <!-- Your existing video player code -->
+              </div>
+            </video>
+          </div>
+          <div class="custom-controls" id="customControls">
+            <!-- Add these new buttons before the existing play-pause button -->
+            <button class="control-btn" id="rewind-btn">
+              <span>⏪</span>
+            </button>
+            
+            <button class="control-btn" id="play-pause-btn">
+              <span id="play-pause-icon">▶</span>
+            </button>
+            
+            <button class="control-btn" id="fast-forward-btn">
+              <span>⏩</span>
+            </button>
+          
+            <button class="control-btn" id="replay-btn">
+              <span>🔄</span>
+            </button>
+          
+            <button class="control-btn" id="heart-btn">
+              <span>❤️</span>
+            </button>
+            <!-- Rest of your existing controls -->
+      
+            <div class="progress-container" id="progressContainer">
+              <div class="progress-bar" id="progressBar"></div>
+            </div>
+      
+            <div class="time-display" id="timeDisplay">0:00 / 0:00</div>
+      
+            <div class="volume-container">
+              <button class="control-btn" id="volume-btn">
+                <span id="volume-icon">🔊</span>
+              </button>
+              <input
+                type="range"
+                id="volume-slider"
+                class="volume-slider"
+                min="0"
+                max="100"
+                value="100" />
+            </div>
+      
+            <button class="control-btn" id="fullscreen-btn">
+              <span>⛶</span>
+            </button>
+          </div>
         </div>
       </section>
-    </main>
+   <!-- Gallery Section -->
+<section id="videos" class="gallery-section">
+    <div class="video-gallery">
+        <!-- Gallery Item 1 -->
+        <div class="gallery-item" onclick="loadVideo('https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4', 'DigitalVideo art 00')">
+            <div class="thumbnail-container">
+                <video muted>
+                    <source src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4" type="video/mp4" />
+                </video>
+                <div class="gallery-overlay">
+                    <div class="play-icon">▶</div>
+                </div>
+            </div>
+            <div class="video-info">
+                <div class="gallery-title-text">DigitalVideo art 00</div>
+            </div>
+        </div>
+         <!-- Gallery Item 1 -->
+         <div class="gallery-item" onclick="loadVideo('https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4', 'DigitalVideo art 00')">
+            <div class="thumbnail-container">
+                <video muted>
+                    <source src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4" type="video/mp4" />
+                </video>
+                <div class="gallery-overlay">
+                    <div class="play-icon">▶</div>
+                </div>
+            </div>
+            <div class="video-info">
+                <div class="gallery-title-text">DigitalVideo art 01</div>
+            </div>
+        </div>
+         <!-- Gallery Item 2 -->
+         <div class="gallery-item" onclick="loadVideo('https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4', 'DigitalVideo art 00')">
+            <div class="thumbnail-container">
+                <video muted>
+                    <source src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4" type="video/mp4" />
+                </video>
+                <div class="gallery-overlay">
+                    <div class="play-icon">▶</div>
+                </div>
+            </div>
+            <div class="video-info">
+                <div class="gallery-title-text">DigitalVideo art 02</div>
+            </div>
+        </div>
+         <!-- Gallery Item 3 -->
+         <div class="gallery-item" onclick="loadVideo('https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4', 'DigitalVideo art 00')">
+            <div class="thumbnail-container">
+                <video muted>
+                    <source src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4" type="video/mp4" />
+                </video>
+                <div class="gallery-overlay">
+                    <div class="play-icon">▶</div>
+                </div>
+            </div>
+            <div class="video-info">
+                <div class="gallery-title-text">DigitalVideo art 03</div>
+            </div>
+        </div>
+         <!-- Gallery Item 4 -->
+         <div class="gallery-item" onclick="loadVideo('https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4', 'DigitalVideo art 00')">
+            <div class="thumbnail-container">
+                <video muted>
+                    <source src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4" type="video/mp4" />
+                </video>
+                <div class="gallery-overlay">
+                    <div class="play-icon">▶</div>
+                </div>
+            </div>
+            <div class="video-info">
+                <div class="gallery-title-text">DigitalVideo art 04</div>
+            </div>
+        </div> <!-- Gallery Item 5 -->
+        <div class="gallery-item" onclick="loadVideo('https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4', 'DigitalVideo art 00')">
+            <div class="thumbnail-container">
+                <video muted>
+                    <source src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4" type="video/mp4" />
+                </video>
+                <div class="gallery-overlay">
+                    <div class="play-icon">▶</div>
+                </div>
+            </div>
+            <div class="video-info">
+                <div class="gallery-title-text">DigitalVideo art 05</div>
+            </div>
+        </div>
 
-    <!-- our footer contains our attributions -->
+        
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h3>Contact:</h3>
+            <div class="social-links">
+              <a href="#">Facebook</a>
+              <a href="#">Instagram</a>
+              <a href="#">Youtube</a>
+            </div>
+          </div>
+          <div class="contact-visual"></div>
+        </div>
+      </section>
+      
+
+    <!-- Footer Section -->
     <footer>
-      <p>&copy; 2025 Media Player Website. All rights reserved.</p>
-      <a href="https://icons8.com/icon/59862/play">Play</a> icon by
-      <a href="https://icons8.com">Icons8</a>
-      <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
-      <a href="https://icons8.com">Icons8</a>
+      <p>&copy; 2025 Media Player Website. All rights reserved</p>
     </footer>
   </body>
 </html>
