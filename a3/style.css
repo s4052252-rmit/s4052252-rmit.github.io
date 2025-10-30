@@ -114,7 +114,7 @@ body {
   padding: 40px 50px;
   background-color: #ffffff;
   z-index: 10;
-  min-width: 600px;
+  width: 725px;
 }
 
 .sonder-title {
@@ -132,6 +132,8 @@ body {
   gap: 30px;
   margin-bottom: 30px;
   align-items: baseline;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .sonder-pronunciation {
@@ -139,6 +141,7 @@ body {
   font-size: 22px;
   font-weight: 400;
   color: #333;
+  flex-shrink: 0;
 }
 
 .sonder-type {
@@ -146,8 +149,7 @@ body {
   font-size: 22px;
   font-weight: 400;
   color: #333;
-  border-bottom: 2px solid #333;
-  padding-bottom: 3px;
+  margin-left: 70px;
 }
 
 .sonder-definition {
@@ -156,6 +158,35 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: #000;
+  min-height: 3.2em;
+  overflow: hidden;
+  width: 100%;
+}
+
+.sonder-definition::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: #000;
+  animation: blink 0.7s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.sonder-definition.typing-complete::after {
+  animation: blink 1s infinite;
+  display: inline-block;
 }
 
 /* Silhouette Section */
@@ -262,8 +293,8 @@ body {
     left: 0;
     transform: none;
     margin: 40px auto;
-    min-width: auto;
     width: 90%;
+    padding: 40px 20px;
   }
 }
 
