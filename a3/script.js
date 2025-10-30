@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const img1 = new Image();
 const img2 = new Image();
 img1.src = "p1.svg";
-img2.src = "p1-hover.svg";
+img2.src = "p1-hover.png";
 
 // Prevent default drag behavior
 const images = document.querySelectorAll(".silhouette-base, .silhouette-hover");
