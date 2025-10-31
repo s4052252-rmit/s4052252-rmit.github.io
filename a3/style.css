@@ -189,7 +189,7 @@ body {
   display: inline-block;
 }
 
-/* Silhouette Section */
+/* Original Silhouette Section */
 .silhouette-section {
   width: 100vw;
   height: 100vh;
@@ -197,6 +197,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
+  padding: 60px 20px;
 }
 
 .silhouette-container {
@@ -246,6 +247,251 @@ body {
   animation: writeText 1.5s ease-out forwards;
 }
 
+/* Reset animation when mouse leaves */
+.silhouette-container:not(:hover) .silhouette-hover {
+  animation: eraseText 0.6s ease-in forwards;
+}
+
+/* Chess and Silhouettes Section */
+.chess-silhouette-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 40px 20px;
+  min-height: auto;
+}
+
+.chess-silhouette-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* P4 Container - Smaller */
+.silhouette-item {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 0;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.p4-container {
+  width: 160px;
+  height: 335px;
+  flex-shrink: 0;
+}
+
+.p4-base {
+  display: block;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
+  object-fit: cover;
+}
+
+.p4-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 335px;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  clip-path: inset(0 0 100% 0);
+}
+
+.p4-container:hover .p4-hover {
+  opacity: 1;
+  animation: writeText 1.5s ease-out forwards;
+}
+
+/* Chess Table Container - Smaller */
+.chess-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.chesstable {
+  width: 400px;
+  height: 110px;
+  object-fit: contain;
+  display: block;
+}
+
+/* P5 Container - Smaller */
+.p5-container {
+  width: 147px;
+  height: 337px;
+  flex-shrink: 0;
+}
+
+.p5-base {
+  display: block;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
+  object-fit: cover;
+}
+
+.p5-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 147px;
+  height: 337px;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  clip-path: inset(0 0 100% 0);
+}
+
+.p5-container:hover .p5-hover {
+  opacity: 1;
+  animation: writeText 1.5s ease-out forwards;
+}
+
+/* P6 Section */
+.p6-section {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 60px 40px;
+  padding-left: 100px;
+  min-height: auto;
+}
+
+.p6-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 0;
+  width: 480px;
+  height: 320px;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.p6-base {
+  display: block;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
+  object-fit: cover;
+}
+
+.p6-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  clip-path: inset(0 0 100% 0);
+}
+
+.p6-container:hover .p6-hover {
+  opacity: 1;
+  animation: writeText 1.5s ease-out forwards;
+}
+
+/* Reset animation when mouse leaves */
+.p6-container:not(:hover) .p6-hover {
+  animation: eraseText 0.6s ease-in forwards;
+}
+
+/* P7 Section */
+.p7-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 60px 40px;
+  padding-left: 600px;
+  min-height: auto;
+}
+
+.p7-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 0;
+  width: 720px;
+  height: 470px;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.p7-base {
+  display: block;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
+  object-fit: cover;
+}
+
+.p7-hover-1,
+.p7-hover-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  clip-path: inset(0 0 100% 0);
+}
+
+.p7-container:hover .p7-hover-1 {
+  opacity: 1;
+  animation: writeText 1.5s ease-out forwards;
+  z-index: 1;
+}
+
+.p7-container:hover .p7-hover-2 {
+  opacity: 1;
+  animation: writeText 1.5s ease-out 1.5s forwards;
+  z-index: 2;
+}
+
+/* Reset animation when mouse leaves */
+.p7-container:not(:hover) .p7-hover-1,
+.p7-container:not(:hover) .p7-hover-2 {
+  animation: eraseText 0.6s ease-in forwards;
+  opacity: 0;
+}
+
 @keyframes writeText {
   0% {
     clip-path: inset(0 0 100% 0);
@@ -253,11 +499,6 @@ body {
   100% {
     clip-path: inset(0 0 0 0);
   }
-}
-
-/* Reset animation when mouse leaves */
-.silhouette-container:not(:hover) .silhouette-hover {
-  animation: eraseText 0.6s ease-in forwards;
 }
 
 @keyframes eraseText {
@@ -295,6 +536,28 @@ body {
     margin: 40px auto;
     width: 90%;
     padding: 40px 20px;
+  }
+
+  .chess-silhouette-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .p4-container,
+  .p5-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .chesstable {
+    width: 100%;
+    height: auto;
+  }
+
+  .p6-container,
+  .p7-container {
+    width: 100%;
+    height: auto;
   }
 }
 
