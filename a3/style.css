@@ -433,7 +433,7 @@ body {
   align-items: center;
   background-color: #ffffff;
   padding: 60px 40px;
-  padding-left: 600px;
+  padding-left: 50px;
   min-height: auto;
 }
 
@@ -490,6 +490,304 @@ body {
 .p7-container:not(:hover) .p7-hover-2 {
   animation: eraseText 0.6s ease-in forwards;
   opacity: 0;
+}
+
+/* P8 and P9 Section */
+.p8-p9-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 60px 40px;
+  min-height: auto;
+}
+
+.p8-p9-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  max-width: 1400px;
+  width: 100%;
+}
+
+/* P9 Container - LARGER (Left) */
+.p9-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 0;
+  width: 320px;
+  height: 480px;
+  user-select: none;
+  -webkit-user-drag: none;
+  flex-shrink: 0;
+}
+
+.p9-base {
+  display: block;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
+  object-fit: cover;
+}
+
+.p9-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  clip-path: inset(0 0 100% 0);
+}
+
+.p9-container:hover .p9-hover {
+  opacity: 1;
+  animation: writeText 1.5s ease-out forwards;
+}
+
+/* P8 Container - SMALLER (Right) */
+.p8-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 0;
+  width: 270px;
+  height: 405px;
+  user-select: none;
+  -webkit-user-drag: none;
+  flex-shrink: 0;
+  margin-top: 350px;
+}
+
+.p8-base {
+  display: block;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
+  object-fit: cover;
+}
+
+.p8-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  clip-path: inset(0 0 100% 0);
+}
+
+.p8-container:hover .p8-hover {
+  opacity: 1;
+  animation: writeText 1.5s ease-out forwards;
+}
+
+/* Reset animation when mouse leaves */
+.p8-container:not(:hover) .p8-hover,
+.p9-container:not(:hover) .p9-hover {
+  animation: eraseText 0.6s ease-in forwards;
+}
+
+/* P10, P11, P12 Section */
+.p10-p11-p12-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 80px 40px;
+  min-height: 100vh;
+}
+
+.p10-p11-p12-container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  height: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* P10 Bird - Top Left */
+.p10-container {
+  position: absolute;
+  top: 160px;
+  left: 60px;
+  width: 180px;
+  height: 180px;
+  transform: rotate(-18deg);
+  cursor: pointer;
+}
+
+.p10-base {
+  display: block;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
+  object-fit: cover;
+}
+
+.p10-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  clip-path: inset(0 0 100% 0);
+}
+
+.p10-container:hover .p10-hover {
+  opacity: 1;
+  animation: writeText 1.5s ease-out forwards;
+}
+
+/* P11 - Center */
+.p11-container {
+  position: absolute;
+  top: 500px;
+  left: 800px;
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 240px;
+  cursor: pointer;
+}
+
+.p11-base {
+  display: block;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
+  object-fit: cover;
+}
+
+.p11-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  clip-path: inset(0 0 100% 0);
+}
+
+.p11-container:hover .p11-hover {
+  opacity: 1;
+  animation: writeText 1.5s ease-out forwards;
+}
+
+/* P12 - Right */
+.p12-container {
+  position: absolute;
+  top: 100px;
+  right: 60px;
+  width: 250px;
+  height: 490px;
+  cursor: pointer;
+}
+
+.p12-base {
+  display: block;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
+  object-fit: cover;
+}
+
+.p12-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  clip-path: inset(0 0 100% 0);
+}
+
+.p12-container:hover .p12-hover {
+  opacity: 1;
+  animation: writeText 1.5s ease-out forwards;
+}
+
+/* P10 Small - Bottom Center */
+.p10-small-container {
+  position: absolute;
+  bottom: 400px;
+  left: 400px;
+  width: 160px;
+  height: 320px;
+  cursor: pointer;
+}
+
+.p10-small-base {
+  display: block;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
+  object-fit: cover;
+}
+
+.p10-small-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  clip-path: inset(0 0 100% 0);
+}
+
+.p10-small-container:hover .p10-small-hover {
+  opacity: 1;
+  animation: writeText 1.5s ease-out forwards;
+}
+
+/* Reset animation when mouse leaves */
+.p10-container:not(:hover) .p10-hover,
+.p11-container:not(:hover) .p11-hover,
+.p12-container:not(:hover) .p12-hover,
+.p10-small-container:not(:hover) .p10-small-hover {
+  animation: eraseText 0.6s ease-in forwards;
 }
 
 @keyframes writeText {
@@ -558,6 +856,38 @@ body {
   .p7-container {
     width: 100%;
     height: auto;
+  }
+
+  .p8-p9-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .p8-container,
+  .p9-container {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .p10-container,
+  .p11-container,
+  .p12-container,
+  .p10-small-container {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .p10-p11-p12-container {
+    height: auto;
+    flex-direction: column;
   }
 }
 
