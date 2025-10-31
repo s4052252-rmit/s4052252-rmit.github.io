@@ -26,12 +26,11 @@ body {
   position: relative;
   max-width: 1400px;
   width: 100%;
-  height: 900px;
+  height: 1024px;
 }
 
 .photo {
   position: absolute;
-  filter: grayscale(100%);
   object-fit: contain;
 }
 
@@ -122,7 +121,7 @@ body {
   font-size: 68px;
   font-weight: 800;
   font-style: italic;
-  color: #8b0000;
+  color: #cb2626;
   margin-bottom: 15px;
   letter-spacing: 2px;
 }
@@ -140,7 +139,7 @@ body {
   font-family: "Oxygen", sans-serif;
   font-size: 22px;
   font-weight: 400;
-  color: #333;
+  color: #000000;
   flex-shrink: 0;
 }
 
@@ -148,7 +147,7 @@ body {
   font-family: "Oxygen", sans-serif;
   font-size: 22px;
   font-weight: 400;
-  color: #333;
+  color: #000000;
   margin-left: 70px;
 }
 
@@ -849,7 +848,7 @@ body {
 .bottom-title {
   align-self: flex-end;
   margin-right: -20px;
-  margin-top: 1000px;
+  margin-top: 100px;
 }
 
 /* P13, P14, P15 Container */
@@ -868,33 +867,14 @@ body {
 .p13-container {
   width: 600px;
   height: 400px;
-  flex-shrink: 0;
 }
 
 .p13-base {
   display: block;
   width: 100%;
   height: 100%;
-  margin-top: -180px;
-  margin-left: 10px;
-}
-
-/* P14 Container - Center (Large/Main) */
-.p14-container {
-  width: 500px;
-  height: 480px;
-  flex-shrink: 0;
-}
-
-.p14-base {
-  display: block;
-  width: 100%;
-  height: 100%;
-  vertical-align: top;
-  user-select: none;
-  -webkit-user-drag: none;
-  pointer-events: auto;
-  object-fit: cover;
+  margin-top: -150px;
+  margin-left: -100px;
 }
 
 /* P15 Container - Right (Smaller) */
@@ -902,7 +882,7 @@ body {
   width: 280px;
   height: 420px;
   flex-shrink: 0;
-  margin-left: -150px;
+  margin-left: 300px;
 }
 
 .p15-base {
@@ -910,10 +890,178 @@ body {
   width: 100%;
   height: 100%;
   vertical-align: top;
-  user-select: none;
-  -webkit-user-drag: none;
-  pointer-events: auto;
-  object-fit: cover;
+}
+
+/* Text Layout Section */
+.text-layout-section {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 80px 40px;
+}
+
+.text-layout-container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.text-line {
+  font-family: "Oxygen", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #cb2626;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Line 1 */
+.text-line-1 {
+  align-self: flex-start;
+  margin-bottom: 10px;
+}
+
+.text-line-1-right {
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+
+/* Line 2 */
+.text-line-2 {
+  text-align: left;
+  align-self: flex-start;
+  max-width: 900px;
+  margin-bottom: 80px;
+}
+
+/* Line 3 */
+.text-line-3-left {
+  align-self: flex-start;
+  margin-bottom: -30px;
+}
+
+.text-line-3-right {
+  align-self: flex-end;
+  margin-top: -50px;
+  margin-bottom: 60px;
+}
+
+/* Line 4 */
+.text-line-4 {
+  text-align: right;
+  align-self: flex-end;
+  max-width: 900px;
+  margin-bottom: 70px;
+}
+
+/* Line 5 */
+.text-line-5-left {
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
+.text-line-5-right {
+  text-align: center;
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+/* Line 6 */
+.text-line-6 {
+  align-self: flex-end;
+  margin-top: 10px;
+}
+
+/* Reveal Box Styles */
+.reveal-box {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reveal-box::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1.2em;
+  background-color: #cb2626;
+  transform: translateY(-50%);
+  z-index: 5;
+  transition: all 0.3s ease;
+}
+
+.reveal-box.revealed::before {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Glitch Effect */
+.reveal-box.glitch::before {
+  animation: glitch 0.6s ease-in-out;
+}
+
+@keyframes glitch {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  20% {
+    left: -3px;
+    opacity: 0.8;
+  }
+  40% {
+    left: 3px;
+    opacity: 0.6;
+  }
+  60% {
+    left: -2px;
+    opacity: 0.7;
+  }
+  80% {
+    left: 2px;
+    opacity: 0.8;
+  }
+  100% {
+    left: 0;
+    opacity: 0;
+  }
+}
+
+/* Alternative glitch with duplication effect */
+@keyframes glitch-distortion {
+  0% {
+    clip-path: inset(0 0 0 0);
+    left: 0;
+  }
+  20% {
+    clip-path: inset(0 0 60% 0);
+    left: -4px;
+  }
+  40% {
+    clip-path: inset(40% 0 0 0);
+    left: 4px;
+  }
+  60% {
+    clip-path: inset(0 0 30% 0);
+    left: -3px;
+  }
+  80% {
+    clip-path: inset(60% 0 0 0);
+    left: 3px;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    left: 0;
+  }
 }
 
 @keyframes writeText {

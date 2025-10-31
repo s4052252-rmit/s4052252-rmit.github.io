@@ -47,3 +47,44 @@ images.forEach((img) => {
     return false;
   });
 });
+
+// Add this to your existing script.js
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Reveal box functionality
+  const revealBoxes = document.querySelectorAll(".reveal-box");
+
+  revealBoxes.forEach((box) => {
+    box.addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      // Remove glitch class if it exists
+      this.classList.remove("glitch");
+
+      // Trigger reflow to restart animation
+      void this.offsetWidth;
+
+      // Add glitch effect
+      this.classList.add("glitch");
+
+      // After glitch animation, reveal the text
+      setTimeout(() => {
+        this.classList.add("revealed");
+      }, 300);
+
+      // Optional: Hide again after delay
+      setTimeout(() => {
+        this.classList.remove("glitch");
+      }, 600);
+    });
+  });
+
+  // Close reveal when clicking elsewhere
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".reveal-box")) {
+      revealBoxes.forEach((box) => {
+        box.classList.remove("revealed", "glitch");
+      });
+    }
+  });
+});
